@@ -31,6 +31,7 @@ Const: const MAX_POINTS: u32 = 100_000;
 ##### Integer literals
 
 | Number literals	| Example |
+| --- | --- |
 | Decimal	| 98_222 |
 | Hex	| 0xff |
 | Octal	| 0o77 |
@@ -40,7 +41,8 @@ Const: const MAX_POINTS: u32 = 100_000;
 ##### Floating-Point types
 
 ```
-Default: let x = 2.0; // f64  (The default type is f64 because on modern CPUs it’s roughly the same speed as f32 but is capable of more precision. )
+Default: let x = 2.0; // f64
+(The default type is f64 because on modern CPUs it’s roughly the same speed as f32 but is capable of more precision. )
 Explicit: let y: f32 = 3.0; // f32
 ```
 
@@ -67,9 +69,11 @@ let z = 'ℤ';
 let heart_eyed_cat = '😻';
 ```
 
-##### Compount types
+#### Compount types
 
-**Tuple:** collection with variety of types and fixed length, accessing by .index or using pattern matching
+##### Tuple type
+
+Collection with variety of types and fixed length, accessing by .index or using pattern matching
 
 ``` 
 let x: (i32, f64, u8) = (500, 6.4, 1);
@@ -84,7 +88,7 @@ let (a, b, c) = x;
 
 ##### Array type
 
-**Array:** collection but same type and fixed length, accessing by [index]
+Collection but same type and fixed length, accessing by [index]
 
 ```
 Declarations:
