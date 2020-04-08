@@ -202,9 +202,9 @@ fn main() {
 }
 ```
 
-## 4_Ownership
+## [Understanding Ownership](https://doc.rust-lang.org/stable/book/ch04-00-understanding-ownership.html)
 
-### 4.1 What is it?
+### [4.1. What is Ownership?](https://doc.rust-lang.org/stable/book/ch04-01-what-is-ownership.html)
 
 #### Rules
 
@@ -328,8 +328,11 @@ fn takes_and_gives_back(a_string: String) -> String { // a_string comes into
     a_string  // a_string is returned and moves out to the calling function
 }
 ```
-### 4.2 References and Borrowing
+
+### [4.2. References and Borrowing](https://doc.rust-lang.org/stable/book/ch04-02-references-and-borrowing.html)
+
 You can pass the refence ( pointer of content ) with & and ownership is not sent
+
 ```
 fn main() {
     let s1 = String::from("hello");
@@ -350,7 +353,9 @@ We call have references as function paramenters borrowing.
 #### Mutable References
 
 NOTE: &String is not mutable
+
 Changing &String to:
+
 ```
 fn main() {
     let mut s = String::from("hello");
@@ -402,8 +407,11 @@ println!("{} and {}", r1, r2);
 let r3 = &mut s; // no problem
 println!("{}", r3);
 ```
+
 ### Dangling References
+
 Is not possible send a reference from function to outside ( you loose the ownership )
+
 ```
 fn main() {
     let reference_to_nothing = dangle();
@@ -423,9 +431,12 @@ Let’s recap what we’ve discussed about references:
 At any given time, you can have either one mutable reference or any number of immutable references.
 References must always be valid.
 
-## 4.3 The Slice Type
+## [4.3. The Slice Type](https://doc.rust-lang.org/stable/book/ch04-03-slices.html)
+
 Slice type does not have ownership
+
 ### String slices
+
 let s = String::from("hello world");
 ```
 let hello = &s[0..5];
