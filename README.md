@@ -17,11 +17,11 @@ Summary of https://doc.rust-lang.org/stable/book
     * [4.2. References and Borrowing](https://github.com/NexoStudio/rust_summary/#42-references-and-borrowing)
     * [4.3. The Slice Type](https://github.com/NexoStudio/rust_summary/#43-the-slice-type)
 
- * 5. Using Structs to Structure Related Data
+ * [5. Using Structs to Structure Related Data](https://github.com/NexoStudio/rust_summary/#5-using-structs-to-structure-related-data)
 
-    * 5.1. Defining and Instantiating Structs
-    * 5.2. An Example Program Using Structs
-    * 5.3. Method Syntax
+    * [5.1. Defining and Instantiating Structs](https://github.com/NexoStudio/rust_summary/#51-defining-and-instantiating-structs)
+    * [5.2. An Example Program Using Structs](https://github.com/NexoStudio/rust_summary/#52-an-example-program-using-structs)
+    * [5.3. Method Syntax](https://github.com/NexoStudio/rust_summary/#53-method-syntax)
 
  * 6. Enums and Pattern Matching
 
@@ -625,7 +625,7 @@ let a = [1, 2, 3, 4, 5];
 let slice = &a[1..3];
 ```
 
-## 5_ Using Structs to Structure Related Data
+## 5. Using Structs to Structure Related Data
 
 ### 5.1 Defining and Instantiating Structs
 
@@ -833,15 +833,20 @@ impl Rectangle {
         self.width > other.width && self.height > other.height
     }
 }
-__Associated functions
+```
+#### Associated functions
 Functions without oject self:
+```
 impl Rectangle {
     fn square(size: u32) -> Rectangle {
         Rectangle { width: size, height: size }
     }
 }
 let sq = Rectangle::square(3);
-___Multiple impl Blocks
+```
+#### Multiple impl Blocks
+
+```
 impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
